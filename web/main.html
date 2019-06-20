@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DRONE CONTROL by GISTNU</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Teerayoot Injun Teerayoot5056@gmail.com @GISTNU Team">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/eel.js"></script>
+   <script>
+
+    $(document).ready(function () {
+            $("body").on("click","#takeoff",function(){
+                eel.send('takeoff');
+            });
+
+          $("body").on("click","#land",function(){
+                eel.send('land');
+            });
+
+          $("body").on("click","#up",function(){
+                eel.send('up 30 ');
+            });
+
+          $("body").on("click","#down",function(){
+                eel.send('down 30 ');
+            });
+
+          $("body").on("click","#left",function(){
+                eel.send('left 30 ');
+            });
+
+          $("body").on("click","#right",function(){
+                eel.send('right 30 ');
+            });
+
+          $("body").on("click","#forward",function(){
+                eel.send('forward 30 ');
+            });
+
+          $("body").on("click","#back",function(){
+                eel.send('back 30 ');
+            });
+
+          $("body").on("click","#cw",function(){
+                eel.send('cw 45 ');
+            });
+
+          $("body").on("click","#flip",function(){
+                eel.send('flip f ');
+            });
+
+     
+
+        });
+
+
+  
+    </script>
+
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"><img src="http://www3.cgistln.nu.ac.th/training/img/logo.png" width="10%" alt=""></a>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <img src="http://d1f3xz7hjchz45.cloudfront.net/images2/dji/dji-tello-big006.jpg" width="100%" alt="">
+    </div>
+    <div class="col-sm-6 text-left"> 
+    	
+
+    			<h2>TELLO CONTROL BY GISTNU</h2>
+          <h3>Clik Button to Control</h3>
+          <hr>
+          <button type="" class="btn btn-info" id="takeoff">takeoff</button>
+          <button type="" class="btn btn-danger" id="land">Land</button> <br>
+          <button type="" class="btn btn-warning" id="up">up</button> <br>
+          <button type="" class="btn btn-warning" id="down">down</button> <br>
+          <button type="" class="btn btn-warning" id="left">left</button> <br>
+          <button type="" class="btn btn-warning" id="right">right</button> <br>
+          <button type="" class="btn btn-warning" id="forward">forward</button> <br>
+          <button type="" class="btn btn-warning" id="back">back</button> <br>
+          <button type="" class="btn btn-warning" id="cw">cw</button> 
+     
+    </div>
+    <div class="col-sm-4 sidenav">
+    console view
+    <hr>
+     <p id="demo"></p>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>BY GISTNU</p>
+</footer>
+
+</body>
+</html>
